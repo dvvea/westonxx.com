@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>westondev</title>
+    <!-- Include FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Include tilt.js Library -->
+    <script src="code/main.js"></script>
+    <script src="code/tilt.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="assets/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="content">
+        <!-- Add the data-tilt attribute to enable tilt.js -->
+        <img id="logo" src="assets/logo.png" alt="Logo" data-tilt >
+        <h1 data-tilt>↓</h1>
+        <div>
+          <a class="icon-link" href="https://github.com/dvvea" target="_blank">
+              <i class="fab fa-github"></i>
+          </a>
+          <a class="icon-link" href="https://discord.gg/westondev" target="_blank">
+              <i class="fab fa-discord"></i>
+          </a>
+          <a class="icon-link" href="https://twitter.com/westonxxr" target="_blank">
+              <i class="fab fa-twitter"></i>
+          </a>
+          <a class="icon-link" href="https://t.me/westonxx" target="_blank">
+            <i class="fab fa-telegram"></i>
+        </a>
+      </div>
+    </div>
+
+    <script>
+        // Initialize tilt.js for the logo
+        VanillaTilt.init(document.querySelector("#logo"), {
+            max: 25, // max tilt rotation (degrees)
+            speed: 400, // tilt speed
+            glare: true, // enable glare effect
+            "max-glare": 0.5 // glare opacity
+        });
+
+        // Initialize tilt.js for the header
+        VanillaTilt.init(document.querySelector("h1"), {
+            max: 150, // smaller tilt for the header
+            speed: 700, // tilt speed
+            glare: true, // enable glare effect
+            "max-glare": 0.0 // lighter glare for the header
+        });
+    </script>
+</body>
+</html>
