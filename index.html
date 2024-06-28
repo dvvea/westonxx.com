@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>westondev</title>
-    <!-- Include FontAwesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Include tilt.js Library -->
     <script src="code/main.js"></script>
     <script src="code/tilt.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -17,7 +15,6 @@
         Your browser does not support the video tag.
     </video>
     <div id="content">
-        <!-- Add the data-tilt attribute to enable tilt.js -->
         <img id="logo" src="assets/logo.png" alt="Logo" data-tilt >
         <h1 data-tilt>↓</h1>
         <div>
@@ -37,20 +34,19 @@
     </div>
 
     <script>
-        // Initialize tilt.js for the logo
         VanillaTilt.init(document.querySelector("#logo"), {
-            max: 25, // max tilt rotation (degrees)
-            speed: 400, // tilt speed
-            glare: true, // enable glare effect
-            "max-glare": 0.5 // glare opacity
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
         });
 
         // Initialize tilt.js for the header
         VanillaTilt.init(document.querySelector("h1"), {
-            max: 150, // smaller tilt for the header
-            speed: 700, // tilt speed
-            glare: true, // enable glare effect
-            "max-glare": 0.0 // lighter glare for the header
+            max: 150,
+            speed: 700,
+            glare: true,
+            "max-glare": 0.0
         });
     </script>
 </body>
